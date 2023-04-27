@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Survey Form</title>
+</head>
+<body>
+    <h1 id="title">Форма связи</h1>
+    <p id="description">Спасибо Вам, что выбрали нас!</p>
+    <form id="survey-form">
+        <fieldset>
+            <label id="name-label">Имя <input id="name" type="text" required placeholder="Введите Ваше имя"></input></label>
+            <label id="email-label">Email <input id="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required placeholder="Введите Вашу почту"></input></label>
+            <label id="number-label">Номер <input id="number" type="number" min="10" max="100" placeholder="Возраст"></input></label>
+            <label for="dropdown">Уровень Вашего образования?</label>
+            <select id="dropdown"> 
+                <option value="">Выберите</option>
+                <option value="1">Начальное общее образование</option>
+                <option value="2">Основное общее образование</option>
+                <option value="3">Среднее общее образование</option>
+                <option value="4">Среднее профессиональное образование</option>
+                <option value="5">Высшее образование – бакалавриат</option>
+                <option value="6">Высшее образование – специалитет или магистратура</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <label>Как вы предпочитаете получить ответ:</label>
+            <label for="answer-phone"><input class="inline" id="answer-phone" value="radioPhone" type="radio" name="answer-type" /> По телефону</label>
+            <label for="answer-email"><input class="inline" id="answer-email" value="radioEmail" type="radio" name="answer-type" /> По email</label>
+        </fieldset>
+        <fieldset>
+            <label for="information">Какие вопросы Вас интересуют?<br>
+                <input class="inline" id="information" type="checkbox" value="check1" required name="Price"/> Стоимость обучения
+                <input class="inline" id="information" type="checkbox" value="check2" required name="Sale"/> Скидки
+                <input class="inline" id="information" type="checkbox" value="check3" required name="Trial days"/> Пробные дни
+                <input class="inline" id="information" type="checkbox" value="check4" required name="Program"/> Программа
+                <input class="inline" id="information" type="checkbox" value="check5" required name="Requirements"/> Требования
+            </label>
+        </fieldset>
+        <fieldset>
+            <label for="comments">Для дополнительной информации
+                <textarea id="comments" name="comments" rows="3" cols="30" placeholder="Другое..."></textarea>
+            </label>
+        </fieldset>
+        <input class="button" type="submit" id="submit" value="Отправить" />
+    </form>
+</body>
+</html>
